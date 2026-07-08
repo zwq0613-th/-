@@ -1,0 +1,17 @@
+import numpy as np
+
+A = np.random.randint(1, 10, size=(2, 3))
+B = np.random.randint(1, 10, size=(2, 3))
+print(f"A:\n{A}\nB:\n{B}")
+
+print(f"\n逐元素乘:\n{A * B}")
+print(f"矩阵乘:\n{A @ B.T}")
+
+sum_arr = np.array([[1, 2], [3, 4]])
+print(f"\n求和测试:\n{sum_arr}")
+print(f"列和: {np.sum(sum_arr, axis=0)}, 行和: {np.sum(sum_arr, axis=1)}")
+
+stat = np.array([1.2, 3.5, 2.8])
+print(f"\n统计数组: {stat}")
+print(f"均值: {np.mean(stat):.2f}, 标准差: {np.std(stat):.2f}")
+print(f"四舍五入: {np.round(stat)}")
