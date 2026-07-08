@@ -1,0 +1,9 @@
+import numpy as np
+
+arr = np.random.rand(10)
+norm = (arr - arr.min()) / (arr.max() - arr.min()) * 100
+
+print(f"原始数组:\n{arr}")
+print(f"\n归一化后:\n{norm.round(2)}")
+print(f"\n累计和:\n{norm.cumsum().round(2)}")
+print(f"累计最大值:\n{np.maximum.accumulate(norm).round(2)}")
